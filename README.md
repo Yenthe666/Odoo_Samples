@@ -26,3 +26,6 @@ Changes in sale_view.xml:
 <h3>Module on_change_function</h3>
 This module is a new module from scratch which inherits the model product.template.
 It adds the fields CostPrice and ShippingCost, which you can see in models.py. This is also where the on_change event is programmed. The fields are then added to the products view in the file templates.xml, which inherits the default product view.
+
+<h3>Module xpath_expressions</h3>
+This module is a new module, from scratch which inherits the model product.template and inherits the product view (sale > products). In this sample you can see how to add new pages, groups or fields with xpath expressions. You can see the samples in templates.xml.
