@@ -1,0 +1,15 @@
+<openerp>
+    <data>
+        <record id="view_product_form_inherit" model="ir.ui.view">
+            <field name="name">product.template.common.form.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='standard_price']" position="before">
+                <field name="CostPrice" on_change="on_change_price(CostPrice,ShippingCost)"/>
+		<field name="ShippingCost" on_change="on_change_price(CostPrice,ShippingCost)"/>
+		</xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
