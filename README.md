@@ -2,7 +2,7 @@
 This repository contains samples in different modules.  
 Every folder is a module which you can easily install to see how things work or you can browse the code!
 
-<h3>sale</h3>
+<h3>Module sale</h3>
 This module is the default sale module with a few modifications. All the changes can be seen in sale.py and sale_view.xml.<br />
 Changes in sale.py:
 ```
@@ -22,3 +22,7 @@ Changes in sale_view.xml:
   ```
     <field name="currency_id_invoices"/>
   ```
+
+<h3>Module on_change_function</h3>
+This module is a new module from scratch which inherits the model product.template.
+It adds the fields CostPrice and ShippingCost, which you can see in models.py. This is also where the on_change event is programmed. The fields are then added to the products view in the file templates.xml, which inherits the default product view.
