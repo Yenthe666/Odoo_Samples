@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="report_images_document_sample">
+<t t-foreach="docs" t-as="o">
+    <t t-call="report.external_layout">
+        <div class="page">
+            <div class="oe_structure"/>
+		<div class="row">
+		<table>
+			<tr>
+				<td style="width:33% !important;">
+				Full size:<br/>
+<span t-field="o.image" t-field-options="{&quot;widget&quot;: &quot;image&quot;}"/>
+				</td>
+				<td style="width:33% !important;">
+				128x128:<br/>
+<span t-field="o.image_medium" t-field-options="{&quot;widget&quot;: &quot;image&quot;}"/>
+				</td>
+				<td style="width:33% !important;">
+				64x64:<br/>
+					<span t-field="o.image_small" t-field-options="{&quot;widget&quot;: &quot;image&quot;}"/>
+				</td>
+				<td style="width:33% !important;">
+				Name:<br/>
+					<span t-field="o.name"/>
+				</td>
+			</tr>
+		</table>
+		</div>
+	    <div class="oe_structure"/>
+        </div>
+    </t>
+</t>
+</template>
+
+<!--<template id="report_images">
+    <t t-call="report.html_container">
+        <t t-foreach="doc_ids" t-as="doc_id">
+            <t t-raw="translate_doc(doc_id, doc_model, 'lang', 'upload_images.report_images_document_sample')"/>
+        </t>
+    </t>
+</template>-->
+</data>
+</openerp>

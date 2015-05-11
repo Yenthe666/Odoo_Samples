@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report 
+            id="report_images_id"
+            string="Image report"
+            model="upload_images.tutorial" 
+            report_type="qweb-pdf"
+            file="upload_images.report_images_document_sample" 
+            name="upload_images.report_images_document_sample" 
+        />
+    </data>
+</openerp>

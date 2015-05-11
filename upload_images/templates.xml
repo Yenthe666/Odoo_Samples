@@ -1,0 +1,29 @@
+<openerp>
+    <data>
+        <record id="action_upload_images" model="ir.actions.act_window">
+            <field name="name">Images</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">upload_images.tutorial</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref=""/>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_our_customers"
+                action="action_upload_images" parent="base.menu_sales"
+                sequence="14"/>
+
+       <record id="view_images_form" model="ir.ui.view">
+            <field name="name">upload_images.tutorial.form</field>
+            <field name="model">upload_images.tutorial</field>
+            <field name="arch" type="xml">
+                <form string="Our images">
+			<group>
+				<field name="name"/>
+				<field name="image_medium"/>
+				<field name="image_small"/>
+			</group>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>
