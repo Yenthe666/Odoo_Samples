@@ -9,6 +9,9 @@ This module will learn you how to automatically insert default data in to a data
 This module is a new module from scratch that inherits sale.order. It will create a new many2many to the model sale.order.printorder and will automatically fill this many2many with all the data from the model sale.order.printorder.
 In this sample you can see how to use default=, how to use functions and how to use self.pool.
 
+<h3>Module on_change_function</h3>
+This module is a new module from scratch which inherits the model product.template.
+It adds the fields CostPrice and ShippingCost, which you can see in models.py. This is also where the on_change event is programmed. The fields are then added to the products view in the file templates.xml, which inherits the default product view.
 
 <h3>Module sale</h3>
 This module is the default sale module with a few modifications. All the changes can be seen in sale.py and sale_view.xml.<br />
@@ -30,10 +33,6 @@ Changes in sale_view.xml:
   ```
     <field name="currency_id_invoices"/>
   ```
-
-<h3>Module on_change_function</h3>
-This module is a new module from scratch which inherits the model product.template.
-It adds the fields CostPrice and ShippingCost, which you can see in models.py. This is also where the on_change event is programmed. The fields are then added to the products view in the file templates.xml, which inherits the default product view.
 
 <h3>Module xpath_expressions</h3>
 This module is a new module, from scratch which inherits the model product.template and inherits the product view (sale > products). In this sample you can see how to add new pages, groups or fields with xpath expressions. You can see the samples in templates.xml.
