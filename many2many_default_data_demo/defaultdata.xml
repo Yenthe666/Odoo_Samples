@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+	<!--This will create some default records if they do not exist yet. We will always need these so these are auto-rendered. -->
+        <record id="goals_print_order" model="sale.order.printorder">
+            <field name="name">Goals</field>
+        </record>
+        <record id="workmethod_print_order" model="sale.order.printorder">
+            <field name="name">Work method</field>
+        </record>
+        <record id="approach_print_order" model="sale.order.printorder">
+            <field name="name">Approach</field>
+        </record>
+        <record id="orderlines_print_order" model="sale.order.printorder">
+            <field name="name">Orderlines</field>
+        </record>
+        <record id="about_print_order" model="sale.order.printorder">
+            <field name="name">About</field>
+        </record>
+        <record id="customer_print_order" model="sale.order.printorder">
+            <field name="name">Customer</field>
+        </record>
+        <record id="references_print_order" model="sale.order.printorder">
+            <field name="name">References</field>
+        </record>
+    </data>
+</openerp>
