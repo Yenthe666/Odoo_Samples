@@ -34,8 +34,8 @@ Changes in sale_view.xml:
     <field name="currency_id_invoices"/>
   ```
 
-<h3>Module xpath_expressions</h3>
-This module is a new module, from scratch which inherits the model product.template and inherits the product view (sale > products). In this sample you can see how to add new pages, groups or fields with xpath expressions. You can see the samples in templates.xml.
-
 <h3>Module upload_images</h3>
 This module is a new module, from scratch which creates a new model (upload_images.tutorial), a new report (report_images.xml) and a new menu_item named 'Images' under Sales. In this new menu item you can upload images in multiple sizes and you will see a new report detail here. With this report you will see the image printed in multiple sizes.
+
+<h3>Module xpath_expressions</h3>
+This module is a new module, from scratch which inherits the model product.template and inherits the product view (sale > products). In this sample you can see how to add new pages, groups or fields with xpath expressions. You can see the samples in templates.xml.
