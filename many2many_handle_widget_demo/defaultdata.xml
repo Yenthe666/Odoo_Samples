@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+	<!--This will create some default records if they do not exist yet. We will always need these so these are auto-rendered. -->
+        <record id="goals_handle_widget" model="sale.order.handle">
+            <field name="name">Goals</field>
+	    <field name="sequence">10</field>
+        </record>
+        <record id="workmethod_handle_widget" model="sale.order.handle">
+            <field name="name">Work method</field>
+	    <field name="sequence">10</field>
+        </record>
+        <record id="approach_handle_widget" model="sale.order.handle">
+            <field name="name">Approach</field>
+	    <field name="sequence">10</field>
+        </record>
+        <record id="orderlines_handle_widget" model="sale.order.handle">
+            <field name="name">Orderlines</field>
+	    <field name="sequence">10</field>
+        </record>
+        <record id="about_handle_widget" model="sale.order.handle">
+            <field name="name">About</field>
+	    <field name="sequence">10</field>
+        </record>
+        <record id="customer_handle_widget" model="sale.order.handle">
+            <field name="name">Customer</field>
+	    <field name="sequence">10</field>
+        </record>
+        <record id="references_handle_widgetr" model="sale.order.handle">
+            <field name="name">References</field>
+	    <field name="sequence">10</field>
+        </record>
+    </data>
+</openerp>

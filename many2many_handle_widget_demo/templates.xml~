@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="many2many_handle_list_action">
+            <field name="name">Items for handle widget</field>
+            <field name="res_model">sale.order.handl</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first item for the handle model.
+                </p>
+            </field>
+        </record>
+
+        <record id="many2many_pre_filled_handle_action" model="ir.actions.act_window">
+            <field name="name">Pre-filled many2many (handle)</field>
+            <field name="res_model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+        </record>
+
+	<record id="view_orderinherit_orderlines" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.many2many.handle</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+		<!--Adds a new page (tab) to the view after the tab Information -->
+		<xpath expr="//page[@string='Order Lines']" position="after">
+                    <page name="many2manyhandledemo" string="Many2many handle demo">
+			<group>
+				<field name="print_handle_ids">
+				<tree string="Printing order" editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+				    <field name="name"/>
+				</tree>
+				</field>
+			</group>
+		    </page>
+		</xpath>
+	    </field>
+	</record>
+
+        <!-- top level menu: no parent -->
+        <menuitem id="main_many2many_handle_menu" name="Many2many demo"/>
+        <menuitem id="many2many_handle_menu" name="Many2many demo"
+                  parent="main_many2many_handle_menu"/>
+        <menuitem id="many2many_item_menu" name="Items for Many2many" parent="many2many_handle_menu"
+                  action="many2many_handle_list_action"/>
+        <menuitem id="menu_pre_filled"
+                action="many2many_pre_filled_handle_action" parent="many2many_handle_menu"
+                sequence="20"/>
+    </data>
+</openerp>

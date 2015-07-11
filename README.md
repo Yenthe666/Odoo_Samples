@@ -9,6 +9,10 @@ This module will learn you how to automatically insert default data in to a data
 This module is a new module from scratch that inherits sale.order. It will create a new many2many to the model sale.order.printorder and will automatically fill this many2many with all the data from the model sale.order.printorder.
 In this sample you can see how to use default=, how to use functions and how to use self.pool.
 
+<h3>Module many2many_handle_widget_demo</h3>
+This module is a new module from scratch that inherits sale.order. In this module you can see how the handle widget (drag and drop) works
+with many2many and how sequencing works.
+
 <h3>Module on_change_function</h3>
 This module is a new module from scratch which inherits the model product.template.
 It adds the fields CostPrice and ShippingCost, which you can see in models.py. This is also where the on_change event is programmed. The fields are then added to the products view in the file templates.xml, which inherits the default product view.
