@@ -2,6 +2,11 @@
 This repository contains samples in different modules.  
 Every folder is a module which you can easily install to see how things work or you can browse the code!
 
+<h3>Module many2many_default_data_demo</h3>
+This module is a new module from scratch that inherits sale.order. It will create a new many2many to the model sale.order.printorder and will automatically fill this many2many with all the data from the model sale.order.printorder.
+In this sample you can see how to use default=, how to use functions and how to use self.pool.
+
+
 <h3>Module sale</h3>
 This module is the default sale module with a few modifications. All the changes can be seen in sale.py and sale_view.xml.<br />
 Changes in sale.py:
