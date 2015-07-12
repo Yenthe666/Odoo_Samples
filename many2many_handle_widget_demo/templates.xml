@@ -23,7 +23,7 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-		<!--Adds a new page (tab) to the view after the tab Information -->
+		<!--Adds a new page (tab) to the view after the tab Order Lines -->
 		<xpath expr="//page[@string='Order Lines']" position="after">
                     <page name="many2manyhandledemo" string="Many2many handle demo">
 			<group>
