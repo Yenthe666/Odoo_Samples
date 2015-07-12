@@ -10,8 +10,8 @@
         Long description of module's purpose
     """,
 
-    'author': "Your Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Yenthe Van Ginneken",
+    'website': "http://www.odoo.yenthevg.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
