@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+	<!--Gets triggered by the record with id 'logging_example_action'. Which in turn is triggered on click. -->
+	<record model="ir.ui.view" id="view_logging_form">
+			<field name="name">Logging</field>
+			<field name="model">logging.demo</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+			    <form string="Logging">
+				<group>
+				    <field name='name'/>
+				    <button name="print_log_data" type="object"  string="Log data to terminal"/>
+				</group>
+			    </form>
+			</field>
+	</record>
+        <record model="ir.actions.act_window" id="logging_example_action">
+            <field name="name">Create log statements</field>
+            <field name="res_model">logging.demo</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name='view_id' ref='view_logging_form'/>
+        </record>
+
+        <!-- top level menu: no parent -->
+        <menuitem id="main_logging_menu" name="Logging demo"/>
+        <menuitem id="logging_menu" name="Logging demo"
+                  parent="main_logging_menu"/>
+        <menuitem id="menu_detail_logging"
+                action="logging_example_action" parent="logging_menu"
+                sequence="20"/>
+    </data>
+</openerp>
