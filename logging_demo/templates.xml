@@ -8,9 +8,11 @@
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 			    <form string="Logging">
+				<header>
+				</header>
 				<group>
-				    <field name='name'/>
-				    <button name="print_log_data" type="object"  string="Log data to terminal"/>
+				    <field name="name"/>
+				    <button string="Log data to terminal" type="object" name="print_log_data" context="{'name': name}">
 				</group>
 			    </form>
 			</field>
