@@ -12,7 +12,7 @@
 				</header>
 				<group>
 				    <field name="name"/>
-				    <button string="Log data to terminal" type="object" name="print_log_data" context="{'name': name}">
+				    <button string="Log data to terminal" type="object" name="print_log_data" context="{'name': name}"/>
 				</group>
 			    </form>
 			</field>
