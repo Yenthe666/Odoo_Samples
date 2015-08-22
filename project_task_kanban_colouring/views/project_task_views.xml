@@ -1,0 +1,78 @@
+<openerp>
+    <data>
+        <record id="project_task_inherit_view" model="ir.ui.view">
+            <field name="name">project.task.inherit.view</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='categ_ids']" position="after">
+                    <field name="agenda_status"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="project_task_kanban_view" model="ir.ui.view">
+            <field name="name">project.task.kanban.view</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='categ_ids']" position="after">
+                    <field name="hex_value" widget="color"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="project_task_calendar_view" model="ir.ui.view">
+            <field name="name">project.task.calendar.view</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_calendar"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='project_id']" position="after">
+                    <field name="hex_value"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="agenda_status_tree_view" model="ir.ui.view">
+            <field name="name">agenda.status.tree.view</field>
+            <field name="model">agenda.status</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <tree string="Status">
+                    <field name="name"/>
+                    <field name="color" widget="color"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="agenda_status_form_view" model="ir.ui.view">
+            <field name="name">agenda.status.form.view</field>
+            <field name="model">agenda.status</field>
+            <field name="type">form</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="Status">
+                    <group col="2">
+                        <field name="name"/>
+                        <field name="color" widget="color"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="open_view_agenda_coloring">
+            <field name="name">Agenda Statuses</field>
+            <field name="res_model">agenda.status</field>
+            <field name="view_type">form</field>
+            <field name='view_mode'>tree,form</field>
+            <field name='view_id' ref='agenda_status_tree_view'/>
+        </record>
+
+        <menuitem action="open_view_agenda_coloring"
+                  id="menu_projects_agenda"
+                  name="Agenda statuses"
+                  parent="project.menu_project_management"
+                  sequence="10"/>
+    </data>
+</openerp>

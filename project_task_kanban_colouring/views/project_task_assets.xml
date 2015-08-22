@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="web_task_color_assets_backend"
+                  name="web_task_color_assets_backend"
+                  inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script src="/project_task_kanban_colouring/static/src/js/web_task_color.js"
+                        type="text/javascript"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>
