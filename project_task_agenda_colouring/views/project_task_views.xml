@@ -11,17 +11,6 @@
             </field>
         </record>
 
-        <record id="project_task_kanban_view" model="ir.ui.view">
-            <field name="name">project.task.kanban.view</field>
-            <field name="model">project.task</field>
-            <field name="inherit_id" ref="project.view_task_kanban"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='categ_ids']" position="after">
-                    <field name="hex_value" widget="color"/>
-                </xpath>
-            </field>
-        </record>
-
         <record id="project_task_calendar_view" model="ir.ui.view">
             <field name="name">project.task.calendar.view</field>
             <field name="model">project.task</field>
