@@ -22,17 +22,6 @@
             </field>
         </record>
 
-        <record id="project_task_calendar_view" model="ir.ui.view">
-            <field name="name">project.task.calendar.view</field>
-            <field name="model">project.task</field>
-            <field name="inherit_id" ref="project.view_task_calendar"/>
-            <field name="arch" type="xml">
-                <xpath expr="//field[@name='project_id']" position="after">
-                    <field name="hex_value"/>
-                </xpath>
-            </field>
-        </record>
-
         <record id="agenda_status_tree_view" model="ir.ui.view">
             <field name="name">agenda.status.tree.view</field>
             <field name="model">agenda.status</field>
