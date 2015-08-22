@@ -15,7 +15,7 @@
 #
 ##############################################################################
 {
-    'name': "project_task_colouring",
+    'name': "project_task_agenda_colouring",
     'summary': """
         Add colors to tasks in the agenda view of project tasks.
         """,
