@@ -21,6 +21,17 @@ with many2many and how sequencing works.
 This module is a new module from scratch which inherits the model product.template.
 It adds the fields CostPrice and ShippingCost, which you can see in models.py. This is also where the on_change event is programmed. The fields are then added to the products view in the file templates.xml, which inherits the default product view.
 
+<h3>Module project_task_agenda_colouring</h3>
+<b>Note:</b> If you want to use this module you will also need to install the module web_widget_color. This module builds on top of that module.
+This module will give you the ability to add custom colours to tasks which will then re-color the agenda view.
+There is a new view created 'Agenda statuses' where you can create a status with a color from the color picker. On the project task you can then choose an agenda status. When you'd go to the agenda view you will see it being re-coloured.
+Agenda statusses view:<br/>
+<img src="http://i.imgur.com/ZlHcm9R.png" alt="Agenda statuses"/><br/>
+Project task view:<br/>
+<img src="http://i.imgur.com/OhP9Vau.png" alt="Project task view"/><br/>
+Tasks calendar view:<br/>
+<img src="http://i.imgur.com/3PwRhEG.png" alt="Project tasks calendar view"/>
+
 <h3>Module sale</h3>
 This module is the default sale module with a few modifications. All the changes can be seen in sale.py and sale_view.xml.<br />
 Changes in sale.py:
