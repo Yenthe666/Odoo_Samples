@@ -45,5 +45,30 @@ Changes in sale_view.xml:
 <h3>Module upload_images</h3>
 This module is a new module, from scratch which creates a new model (upload_images.tutorial), a new report (report_images.xml) and a new menu_item named 'Images' under Sales. In this new menu item you can upload images in multiple sizes and you will see a new report detail here. With this report you will see the image printed in multiple sizes.
 
+<h3>Module web_widget_color</h3>
+This module adds a colour picker widget to Odoo. The picker itself is inspired on the <a href="http://jscolor.com">jsColor </a> library.
+To use this widget you need to create a char field in with a size of atleast 7 characters in the database:
+```
+color = fields.Char(
+    string="Color",
+    help="Choose your color"
+)
+```
+Afterwards call it in the view with ```widget="color"```:
+```
+<field name="arch" type="xml">
+    <tree string="View name">
+        ...
+        <field name="name"/>
+        <field name="color" widget="color"/>
+        ...
+    </tree>
+</field>
+```
+Picker sample:<br/>
+<img src="/web_widget_color/images/picker.png"/><br/>
+Tree view sample:<br/>
+<img src="/web_widget_color/images/list_view.png"/>
+
 <h3>Module xpath_expressions</h3>
 This module is a new module, from scratch which inherits the model product.template and inherits the product view (sale > products). In this sample you can see how to add new pages, groups or fields with xpath expressions. You can see the samples in templates.xml.
