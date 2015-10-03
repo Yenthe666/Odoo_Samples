@@ -5,6 +5,11 @@ Every folder is a module which you can easily install to see how things work or 
 <h3>Module default_data_demo</h3>
 This module will learn you how to automatically insert default data in to a database. It will create a new model (demo.default.data) which is filled with records that are made in the file defaultdata.xml (under data/ folder).
 
+<h3>Module inherit_report_demo</h3>
+This module will learn you how to inherit existing QWeb reports and how to modify them.
+In this example I will modify the default quotation/order report and only show the description with the total price.
+To make it look a bit better I've added a table header color.
+
 <h3>Module logging_demo</h3>
 This module will learn you how to create log statements in Odoo. You can use these log statements to debug values
 or to write unusual behaviour to the Odoo logfile.
