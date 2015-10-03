@@ -10,6 +10,9 @@
                         <th class="text-right">Price</th>
                     </tr>
 	    </xpath>
+	    <!-- This will search for the 4'th td element (in the tbody with class sale_tbody) and will remove it. -->
+	    <!-- Important: if you would start with element 2, then do 3 and then do 4 you will see strange behaviour.
+	    	The first statement would remove element 2 making all other elements move in numbering too. -->
 	    <xpath expr="//tbody[@class='sale_tbody']//tr//td[4]" position="replace">
 	    </xpath>
 	    <xpath expr="//tbody[@class='sale_tbody']//tr//td[3]" position="replace">
