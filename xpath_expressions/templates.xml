@@ -14,6 +14,7 @@
 		    </page>
 		</xpath>
 		<!-- New group after other group (inside page) -->
+		<!-- Note that @string xpath expressions have been removed in V9.0! -->
 		<xpath expr="//page[@string='Information']/group" position="after">
 		  <group>
 		    <field name="FieldAfterGroup"/>
