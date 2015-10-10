@@ -2,6 +2,10 @@
 This repository contains samples in different modules.  
 Every folder is a module which you can easily install to see how things work or you can browse the code!
 
+<h3>Module button_action_demo</h3>
+This module will learn you how to create buttons at the top of forms and how to make it perform actions.
+All Python (model data) is under models/button_action_demo.py and you can find the views under views/button_view.xml.
+
 <h3>Module default_data_demo</h3>
 This module will learn you how to automatically insert default data in to a database. It will create a new model (demo.default.data) which is filled with records that are made in the file defaultdata.xml (under data/ folder).
 
