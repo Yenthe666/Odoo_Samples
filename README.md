@@ -74,9 +74,13 @@ Changes in sale_view.xml:
   ```
     <field name="currency_id_invoices"/>
   ```
+ 
+<h3>Module statusbar_demo</h3>
+This module is a new module, from scratch, which creates a new model (statusbar.demo) and new views.
+This module will learn you how to create a statusbar (selection) and how to handle different states and writing on the current record. You will learn how to add buttons, how to trigger functions and how to change the state of your record.
 
 <h3>Module upload_images</h3>
-This module is a new module, from scratch which creates a new model (upload_images.tutorial), a new report (report_images.xml) and a new menu_item named 'Images' under Sales. In this new menu item you can upload images in multiple sizes and you will see a new report detail here. With this report you will see the image printed in multiple sizes.
+This module is a new module, from scratch, which creates a new model (upload_images.tutorial), a new report (report_images.xml) and a new menu_item named 'Images' under Sales. In this new menu item you can upload images in multiple sizes and you will see a new report detail here. With this report you will see the image printed in multiple sizes.
 
 <h3>Module web_widget_color</h3>
 This module adds a colour picker widget to Odoo. The picker itself is inspired on the <a href="http://jscolor.com">jsColor </a> library.
