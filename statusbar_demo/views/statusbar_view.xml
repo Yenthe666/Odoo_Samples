@@ -1,0 +1,45 @@
+<openerp>
+    <data>
+	<!--Gets triggered by the record with id 'statusbar_example_action'. Which in turn is triggered on click. -->
+	<record model="ir.ui.view" id="view_statusbar_form">
+	    <field name="name">Statusbar</field>
+	    <field name="model">statusbar.demo</field>
+	    <field name="type">form</field>
+	    <field name="arch" type="xml">
+	        <form string="Workflow record">
+		    <!--The header tag is built to add buttons within. This puts them at the top -->
+		    <header>
+		        <button string="Set to concept" type="object" name="concept_progressbar" attrs="{'invisible': [('state', '=', 'concept')]}"/>
+			<!--The oe_highlight class gives the button a red color when it is saved.
+			It is usually used to indicate the expected behaviour. -->
+			<button string="Set to started" type="object" name="started_progressbar" class="oe_highlight" attrs="{'invisible': [('state','!=','concept')]}"/>
+			<button string="In progress" type="object" name="progress_progressbar" attrs="{'invisible': [('state','=','progress')]}"/>
+			<button string="Done" type="object" name="done_progressbar" attrs="{'invisible': [('state','=','finished')]}"/>
+			<!--This will create the statusbar, thanks to the widget. -->
+		        <field name="state" widget="statusbar"/>
+		    </header>
+		    <group>
+			<field name="name"/>
+		    </group>
+		</form>
+	    </field>
+	</record>
+
+	<!--The action -->
+        <record model="ir.actions.act_window" id="statusbar_example_action">
+            <field name="name">Create new record</field>
+            <field name="res_model">statusbar.demo</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree</field>
+            <field name='view_id' ref='view_statusbar_form'/>
+        </record>
+
+        <!-- top level menu: no parent -->
+        <menuitem id="main_statusbar_menu" name="Statusbar demo"/>
+        <menuitem id="statusbar_menu" name="Statusbar demo"
+                  parent="main_statusbar_menu"/>
+        <menuitem id="menu_detail_statusbar"
+                action="statusbar_example_action" parent="statusbar_menu"
+                sequence="20"/>
+    </data>
+</openerp>
