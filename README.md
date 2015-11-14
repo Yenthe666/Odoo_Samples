@@ -74,6 +74,9 @@ Changes in sale_view.xml:
   ```
     <field name="currency_id_invoices"/>
   ```
+  
+<h3>Module scheduler_demo</h3>
+This module is a new module, from scratch, which creates a new model (scheduler.demo), new views and an automated action (scheduler). This module will learn you how to create an automated action from scratch, how to loop over all records in a model and how to update those values from within a scheduler.
  
 <h3>Module statusbar_demo</h3>
 This module is a new module, from scratch, which creates a new model (statusbar.demo) and new views.
