@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+	    <!--This will create a default record if it does not exist yet. -->
+        <record id="first_scheduler_item" model="scheduler.demo">
+            <field name="name">Record #1</field>
+            <field name="numberOfUpdates">0</field>
+        </record>
+    </data>
+</openerp>

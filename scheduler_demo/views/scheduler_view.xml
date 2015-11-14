@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- window action -->
+        <!--
+            The following tag is an action definition for a "window action",
+            that is an action opening a view or a set of views
+        -->
+        <record model="ir.actions.act_window" id="default_scheduler_list_action">
+            <field name="name">Scheduler data</field>
+            <field name="res_model">scheduler.demo</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create the first record
+                </p>
+            </field>
+        </record>
+
+	<!-- Form view -->
+       <record id="view_scheduler_record_form" model="ir.ui.view">
+            <field name="name">scheduler.demo.form</field>
+            <field name="model">scheduler.demo</field>
+            <field name="arch" type="xml">
+                <form string="Schedule record">
+		    <group>
+			<field name="name"/>
+			<field name="numberOfUpdates"/>
+			<field name="lastModified"/>
+		    </group>
+                </form>
+            </field>
+        </record>
+		
+	<!-- tree (list) view-->
+       <record id="view_scheduler_tree" model="ir.ui.view">
+            <field name="name">scheduler.demo.tree</field>
+            <field name="model">scheduler.demo</field>
+            <field name="arch" type="xml">
+                <tree string="Schedule records">
+			<field name="name"/>
+			<field name="numberOfUpdates"/>
+			<field name="lastModified"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- top level menu: no parent -->
+        <menuitem id="main_scheduler_demo_menu" name="Scheduler demo"/>
+        <!-- A first level in the left side menu is needed
+             before using action= attribute -->
+        <menuitem id="scheduler_demo_menu" name="Scheduler records"
+                  parent="main_scheduler_demo_menu"/>
+        <menuitem id="default_scheduler_overview_menu" name="Scheduler records" parent="scheduler_demo_menu"
+                  action="default_scheduler_list_action"/>
+    </data>
+</openerp>
