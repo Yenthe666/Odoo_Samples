@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.actions.act_window" id="resource_demo_action">
+            <field name="name">Static resource demo</field>
+            <field name="res_model">static.resource.demo</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click me! This will show you the CSS demo.
+                </p>
+            </field>
+        </record>
+
+        <!-- top level menu: no parent -->
+        <menuitem id="main_resource_menu" name="Static resource demo"/>
+
+        <menuitem id="resource_menu" name="Resources demo"
+                  parent="main_resource_menu"/>
+
+        <menuitem id="default_data_overview_menu" name="Resource record" parent="resource_menu"
+                  action="resource_demo_action"/>
+
+	<!-- Form view for the menuitem -->
+       <record id="resource_demo_form" model="ir.ui.view">
+            <field name="name">static.resource.demo.form</field>
+            <field name="model">static.resource.demo</field>
+            <field name="arch" type="xml">
+                <form string="Static resource demo">
+		    <sheet>
+			<script>
+            		alert('Hi there!\nThis JavaScript is going off from within the XML file!')
+        		</script>
+		        <group>
+			    <field name="name"/>
+			    <div class="DemoClass">
+				<p class="TextDemoClass">Thank you for downloading this tutorial!</p>
+			    </div>
+		        </group>
+		    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

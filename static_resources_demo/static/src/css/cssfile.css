@@ -1,0 +1,16 @@
+.DemoClass 
+{
+    width: 88%;
+    position: absolute;
+    height: 70%;
+    background-color:gray;
+    left:auto;
+    right:auto;
+}
+
+.TextDemoClass
+{
+    font-size:30px;
+    color:white;
+    text-align:center;
+}

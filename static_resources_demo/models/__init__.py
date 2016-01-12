@@ -1,0 +1,1 @@
+import static_resource_model
