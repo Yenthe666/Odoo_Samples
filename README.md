@@ -77,6 +77,10 @@ Changes in sale_view.xml:
   
 <h3>Module scheduler_demo</h3>
 This module is a new module, from scratch, which creates a new model (scheduler.demo), new views and an automated action (scheduler). This module will learn you how to create an automated action from scratch, how to loop over all records in a model and how to update those values from within a scheduler.
+
+<h3>Module static_resources_demo</h3>
+This module is a new module, from scratch which creates a new CSS and JavaScript file.
+This module will learn you how to create new static files and how to add them to the main Odoo CSS / JavaScript.
  
 <h3>Module statusbar_demo</h3>
 This module is a new module, from scratch, which creates a new model (statusbar.demo) and new views.
