@@ -24,7 +24,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/resources.xml',
+        'views/static_resources_demo_templates.xml',
         'views/menus.xml',
     ],
     # only loaded in demonstration mode
