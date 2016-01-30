@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="1">
+
+    <!-- This is the name and the description of the access right under Settings > Users -->
+    <record model="ir.module.category" id="module_user_access_rights">
+            <field name="name">Demo access rights</field>
+            <field name="description">Demo to show you the different access rights</field>
+            <field name="sequence">3</field>
+    </record>
+
+   <!-- An option named 'User' in the dropdown -->
+   <record id="group_module_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="user_access_rights_module_demo.module_user_access_rights"/>
+    </record>
+
+   <!-- An option named 'Manager' in the dropdown -->
+    <record id="group_module_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="user_access_rights_module_demo.module_user_access_rights"/>
+        <field name="implied_ids" eval="[(4, ref('user_access_rights_module_demo.group_module_user'))]"/>
+	<!-- This will, by default, apply this setting to the users added to the eval. -->
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+    </record>
+</data>
+</openerp>
