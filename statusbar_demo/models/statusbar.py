@@ -18,29 +18,33 @@ class statusbar(models.Model):
             ],default='concept')
 
     #This function is triggered when the user clicks on the button 'Set to concept'
-    @api.one
+    @api.multi
     def concept_progressbar(self):
-	self.write({
-	    'state': 'concept',
-	})
+		self.ensure_one()
+	    self.write({
+	        'state': 'concept',
+	    })
 
     #This function is triggered when the user clicks on the button 'Set to started'
-    @api.one
+    @api.multi
     def started_progressbar(self):
-	self.write({
-	    'state': 'started'
-	})
+		self.ensure_one()
+	    self.write({
+	        'state': 'started'
+	    })
 
     #This function is triggered when the user clicks on the button 'In progress'
-    @api.one
+    @api.multi
     def progress_progressbar(self):
-	self.write({
-	    'state': 'progress'
-	})
+		self.ensure_one()
+	    self.write({
+	        'state': 'progress'
+	    })
 
     #This function is triggered when the user clicks on the button 'Done'
-    @api.one
+    @api.multi
     def done_progressbar(self):
-	self.write({
-	    'state': 'finished',
-	})
+		self.ensure_one()
+	    self.write({
+	        'state': 'finished',
+	    })
