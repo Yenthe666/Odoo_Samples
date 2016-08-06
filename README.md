@@ -89,6 +89,9 @@ This module will learn you how to create a statusbar (selection) and how to hand
 <h3>Module upload_images</h3>
 This module is a new module, from scratch, which creates a new model (upload_images.tutorial), a new report (report_images.xml) and a new menu_item named 'Images' under Sales. In this new menu item you can upload images in multiple sizes and you will see a new report detail here. With this report you will see the image printed in multiple sizes.
 
+<h3>Module user_access_rights_demo</h3>
+This module creates a new security selection on the user settings. This allows you to add users to groups under Settings > Users and gives you the ability to show views and fields only to specific user groups.
+
 <h3>Module web_widget_color</h3>
 This module adds a colour picker widget to Odoo. The picker itself is inspired on the <a href="http://jscolor.com">jsColor </a> library.
 To use this widget you need to create a char field in with a size of atleast 7 characters in the database:
