@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "user_access_rights_module_demo",
+    'name': "user_access_rights_demo",
 
     'summary': """
         This demo module shows you how to create user access rights for a module (under Settings > Users)""",
 
     'description': """
-        LThis demo module shows you how to create user access rights for a module (under Settings > Users)
+        This demo module shows you how to create user access rights for a module (under Settings > Users)
     """,
 
     'author': "Yenthe Van Ginneken",
@@ -23,8 +23,8 @@
 
     # always loaded
     'data': [
-        'security/user_groups.xml',
 	'security/ir.model.access.csv',
+        'security/user_groups.xml',
 	'views/user_access_views.xml'
     ],
 }
