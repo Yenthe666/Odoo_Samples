@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-demo_access_rights_admin, Model admin access,model_demo_access_rights,user_access_rights_module_demo.group_module_manager,1,1,1,1
-demo_access_rights_user, Model user access,model_demo_access_rights,user_access_rights_module_demo.group_module_user,1,0,0,0
