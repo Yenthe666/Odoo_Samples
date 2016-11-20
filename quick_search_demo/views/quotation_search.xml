@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+    <!--Inherit quotations search view-->
+    <record id="view_sale_order_inherit_search" model="ir.ui.view">
+      <field name="name">sale.order.search.expand</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+      <field name="arch" type="xml">
+        <xpath expr="//search" position="inside">
+          <!-- This field will show up on the quick search -->
+          <field name="client_order_ref"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
