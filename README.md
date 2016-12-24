@@ -9,6 +9,10 @@ All Python (model data) is under models/button_action_demo.py and you can find t
 <h3>Module default_data_demo</h3>
 This module will learn you how to automatically insert default data in to a database. It will create a new model (demo.default.data) which is filled with records that are made in the file defaultdata.xml (under data/ folder).
 
+<h3>Module default_filter_demo</h3>
+This module will learn you how to add filters on search views.
+It'll allow you to filter on a specific field by simply using the filter from the searchview.
+
 <h3>Module inherit_report_demo</h3>
 This module will learn you how to inherit existing QWeb reports and how to modify them.
 In this example I will modify the default quotation/order report and only show the description with the total price.
