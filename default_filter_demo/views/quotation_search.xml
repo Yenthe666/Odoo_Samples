@@ -7,7 +7,8 @@
       <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
       <field name="arch" type="xml">
         <xpath expr="//search" position="inside">
-          <!-- This field will show up on the default filters -->
+          <!-- This field will show up on the default filters
+               &lt; is the XML encoding for < and &gt; is the XML encoding for > -->
           <filter string="Total &lt; 1000" name="total_under_1000" domain="[('amount_total', '&lt;', 1000)]"/>
           <filter string="Total &gt;= 1000" name="total_above_1000" domain="[('amount_total', '&gt;=', 1000)]"/>
         </xpath>
