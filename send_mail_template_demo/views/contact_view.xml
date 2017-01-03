@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+      <record id="send_mail_partner_form_inherit" model="ir.ui.view">
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+          <!-- Add a header with button to the existing view -->
+          <xpath expr="//sheet" position="before">
+              <header>
+                <button name="send_mail_template" string="Send e-mail" type="object" class="oe_highlight"/>
+              </header>
+          </xpath>
+        </field>
+      </record>
+  </data>
+</odoo>
