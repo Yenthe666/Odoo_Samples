@@ -9,14 +9,14 @@
           <field name="lang">${object.lang}</field>
           <field name="model_id" ref="base.model_res_partner"/>
           <field name="auto_delete" eval="True"/>
-	      <field name="body_html">
+	  <field name="body_html">
             <![CDATA[
-	          <p>Dear ${(object.name)},<br/><br/>
-		      Good job, you've just created your first e-mail template!<br/></p>
+	      <p>Dear ${(object.name)},<br/><br/>
+	      Good job, you've just created your first e-mail template!<br/></p>
               Regards,<br/>
               ${(object.company_id.name)}
-	        ]]>
-	      </field>
+	    ]]>
+	  </field>
        </record>
     </data>
 </odoo>
