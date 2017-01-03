@@ -22,6 +22,14 @@ To make it look a bit better I've added a table header color.
 This module will learn you how to create log statements in Odoo. You can use these log statements to debug values
 or to write unusual behaviour to the Odoo logfile.
 
+<h3>Module mail_template_demo</h3>
+This module will learn you how to create e-mail templates in Odoo.
+It will add a new e-mail template for the model ```res.partner``` and will learn you the basic concepts of e-mail templates and jinja2 rendering.
+
+<h3>Module send_mail_template_demo</h3>
+This module will learn you how to send out e-mail templates from Python code.
+In this example we'll add a send e-mail button. After clicking on it the e-mail template that we created in the module mail_template_demo will be used to send out an e-mail.
+
 <h3>Module many2many_default_data_demo</h3>
 This module is a new module from scratch that inherits sale.order. It will create a new many2many to the model sale.order.printorder and will automatically fill this many2many with all the data from the model sale.order.printorder.
 In this sample you can see how to use default=, how to use functions and how to use self.pool.
