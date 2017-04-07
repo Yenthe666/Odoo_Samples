@@ -2,5 +2,5 @@
 This repository contains samples in different modules.  
 Every folder is a module which you can easily install to see how things work or you can browse the code!
 
-<h3>Module module_name</h3>
-Information about the tutorial.
+<h3>Module override_method_demo</h3>
+This module will learn you how to override the create function in Odoo and how to change values before saving the record in the database.
