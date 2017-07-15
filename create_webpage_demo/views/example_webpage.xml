@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+    <template id="example_page" name="Example page" page="True">
+      <t t-call="website.layout">
+        <div class="oe_structure">
+          <div class="container">
+            <center><h3>Title</h3></center>
+            <p>
+              You can add all your content here.<br/>
+              <a t-attf-href="/example/detail" class="btn btn-info">Company detail page</a>
+            </p>
+          </div>
+        </div>
+      </t>
+    </template>
+
+
+    <template id="detail_page" name="Detail page" page="True">
+      <t t-call="website.layout">
+        <div class="oe_structure">
+          <div class="container">
+            <center><h3>Company detail page</h3></center>
+            <t t-foreach="companies" t-as="company">
+              <h4><span t-esc="company.name"/></h4>
+              <table class="table-striped table">
+                <tr>
+                  <td>Phone:</td>
+                  <td><span t-esc="company.phone"/></td>
+                </tr>
+                <tr>
+                  <td>E-mail:</td>
+                  <td><span t-esc="company.email"/></td>
+                </tr>
+                <tr>
+                  <td>Address:</td>
+                  <td>
+                    <span t-esc="company.street"/> <span t-esc="company.street2"/><br/>
+                    <span t-esc="company.city"/> <span t-esc="company.country_id.name"/>
+                  </td>
+                </tr>
+              </table>
+            </t>
+          </div>
+        </div>
+      </t>
+    </template>
+  </data>
+</odoo>
