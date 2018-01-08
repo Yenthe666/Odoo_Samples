@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="assets_backend" name="tour_demo assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <!-- Include the new tour in the JavaScript assets -->
+            <script type="text/javascript" src="/tour_demo/static/src/js/tour.js"></script>
+        </xpath>
+    </template>
+</odoo>

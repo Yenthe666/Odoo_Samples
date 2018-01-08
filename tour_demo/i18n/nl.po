@@ -1,0 +1,45 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* tour_demo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-08 14:48+0000\n"
+"PO-Revision-Date: 2018-01-08 14:48+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: tour_demo
+#. openerp-web
+#: code:addons/tour_demo/static/src/js/tour.js:25
+#, python-format
+msgid "Fill in the name of the contact."
+msgstr "Vul de naam van de contactpersoon in."
+
+#. module: tour_demo
+#. openerp-web
+#: code:addons/tour_demo/static/src/js/tour.js:17
+#, python-format
+msgid "Let's create your first contact."
+msgstr "Maak uw eerste contactpersoon aan."
+
+#. module: tour_demo
+#. openerp-web
+#: code:addons/tour_demo/static/src/js/tour.js:31
+#, python-format
+msgid "Save this contact and the modifications you've made to it."
+msgstr "Bewaar dit contact en de wijzigingen die je gemaakt hebt."
+
+#. module: tour_demo
+#. openerp-web
+#: code:addons/tour_demo/static/src/js/tour.js:13
+#, python-format
+msgid "Want to <b>create customers</b>?<br/><i>Click on Contacts to start.</i>"
+msgstr "Wilt u <b>klanten aanmaken</b>?<br/><i>Klik op Contacten om te starten.</i>"
+
