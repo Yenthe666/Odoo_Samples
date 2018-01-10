@@ -8,12 +8,12 @@ class TestProject(common.TransactionCase):
 
     def test_create_data(self):
         # Create a new project with the test
-        test_project = self.env['project.project'].sudo().create({
+        test_project = self.env['project.project'].create({
             'name': 'TestProject'
         })
 
         # Add a test task to the project
-        test_project_task = self.env['project.task'].sudo().create({
+        test_project_task = self.env['project.task'].create({
             'name': 'ExampleTask',
             'project_id': test_project.id
         })
