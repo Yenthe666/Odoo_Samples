@@ -18,12 +18,12 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    # any module necessary for this one to work correctly
+    # The website module has to be installed and is needed to add a building block
     'depends': ['website'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        # Load the snippets (building block code) when installing
         'views/snippets.xml',
     ]
 }

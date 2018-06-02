@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!-- This record will create the building block and its layout -->
     <template id="s_title_references" name="References with title">
         <section class="s_references bg-gray-lighter">
             <div class="container">
@@ -36,12 +37,12 @@
         </section>
     </template>
 
-
+    <!-- This record will create a preview of the building block in the left menu from where you choose the blocks -->
     <template id="add_title_references_to_bar" inherit_id="website.snippets" name="Place into building blocks bar">
-		<xpath expr="//div[@id='snippet_structure']" position="inside">
-			<div class="o_panel_body">
-            <t t-snippet="website_snippet_demo.s_title_references"
-               t-thumbnail="/website/static/src/img/blocks/block_references.png"/>
+        <xpath expr="//div[@id='snippet_structure']" position="inside">
+            <div class="o_panel_body">
+                <t t-snippet="website_snippet_demo.s_title_references"
+                   t-thumbnail="/website/static/src/img/blocks/block_references.png"/>
             </div>
         </xpath>
     </template>
