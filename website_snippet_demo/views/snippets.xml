@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_title_references" name="References with title">
+        <section class="s_references bg-gray-lighter">
+            <div class="container">
+                <div class="row">
+                    <h3>
+                        <center>Our references</center>
+                    </h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-6 mt16 mb16">
+                        <img src="/web/image/website.s_reference_demo_image_1" class="img img-responsive "
+                             alt="Demo Logo 1"/>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 mt16 mb16">
+                        <img src="/web/image/website.s_reference_demo_image_2" class="img img-responsive "
+                             alt="Demo Logo 2"/>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 mt16 mb16">
+                        <img src="/web/image/website.s_reference_demo_image_3" class="img img-responsive "
+                             alt="Demo Logo 3"/>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6 mt16 mb16">
+                        <img src="/web/image/website.s_reference_demo_image_4" class="img img-responsive "
+                             alt="Demo Logo 4"/>
+                    </div>
+                    <!-- You can use your own image by calling your own module and then the path to the image
+                    <div class="col-md-2 col-sm-3 col-xs-6 mt16 mb16">
+                        <img src="/website_snippet_demo/static/src/image/website.s_reference_demo_image_6" class="img img-responsive "
+                             alt="Demo Logo 6"/>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+    <template id="add_title_references_to_bar" inherit_id="website.snippets" name="Place into building blocks bar">
+		<xpath expr="//div[@id='snippet_structure']" position="inside">
+			<div class="o_panel_body">
+            <t t-snippet="website_snippet_demo.s_title_references"
+               t-thumbnail="/website/static/src/img/blocks/block_references.png"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
