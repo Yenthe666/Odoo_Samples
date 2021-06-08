@@ -1,4 +1,6 @@
 import xmlrpclib
+# If you use python 3.x use:
+# from xmlrpc import client as xmlrpclib
 
 username = 'admin' # The Odoo user
 pwd = 'admin'# The password of the Odoo user
